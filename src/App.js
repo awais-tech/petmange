@@ -12,6 +12,7 @@ import Accessories from './Accesories';
 import Orders from './Orders';
 import Home from './Home';
 import AddEditProduct from './AddProduct';
+import EditProduct from './EditProduct';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/Accessories" component={Accessories} />
         <Route exact path="/Orders" component={Orders} />
         <Route exact path="/AddEditProduct/:id" component={AddEditProduct} />
+        <Route exact path="/AddEditProduct/:id/:key" component={EditProduct} />
 
         {/* <Route exact path="/" component={AllProducts} />
         <Route exact path="/Cart" component={Cart} />

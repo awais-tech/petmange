@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export default function AddEditProduct() {
+export default function EditProduct() {
   React.useEffect(() => {
     const unsubscribe = configapp
       .database()

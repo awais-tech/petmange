@@ -102,13 +102,23 @@ const Accessories = () => {
               width: 200,
               renderCell: (params) => {
                 return (
-                  <Button
-                    onClick={() => AccessoriesCall(params.row.id)}
-                    variant="contained"
-                    color="primary"
-                  >
-                    Delete
-                  </Button>
+                  <>
+                    <Button
+                      style={{ marginRight: '4px' }}
+                      onClick={() => AccessoriesCall(params.row.id)}
+                      variant="contained"
+                      color="error"
+                    >
+                      Delete
+                    </Button>
+                    <Button
+                      onClick={() => AccessoriesCall(params.row.id)}
+                      variant="contained"
+                      color="primary"
+                    >
+                      Edit
+                    </Button>
+                  </>
                 );
               }
             }

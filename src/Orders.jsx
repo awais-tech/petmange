@@ -96,7 +96,7 @@ const Orders = (props) => {
                         style={{ marginRight: '4px' }}
                         onClick={() => OrdersCall(params.row.id)}
                         variant="contained"
-                        color="primary"
+                        color="error"
                       >
                         Delete
                       </Button>

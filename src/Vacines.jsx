@@ -109,7 +109,7 @@ const Vaccines = (props) => {
                   <Button
                     onClick={() => VaccinesCall(params.row.id)}
                     variant="contained"
-                    color="primary"
+                    color="error"
                   >
                     Delete
                   </Button>

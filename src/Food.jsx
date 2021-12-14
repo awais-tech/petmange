@@ -100,7 +100,7 @@ const Food = (props) => {
                   <Button
                     onClick={() => FoodCall(params.row.id)}
                     variant="contained"
-                    color="primary"
+                    color="error"
                   >
                     Delete
                   </Button>

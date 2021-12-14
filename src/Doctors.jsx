@@ -96,7 +96,7 @@ const Doctor = (props) => {
                     <Button
                       onClick={() => DoctorCall(params.row.UID)}
                       variant="contained"
-                      color="primary"
+                      color="error"
                     >
                       Delete
                     </Button>
