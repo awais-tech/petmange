@@ -4,7 +4,6 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Box from '@mui/material/Box';
 import { Grid, CircularProgress } from '@mui/material';
 import ResponsiveDrawer from './admindashborad';
-import Accessories from './Accesories';
 
 import { configapp } from './firebase';
 

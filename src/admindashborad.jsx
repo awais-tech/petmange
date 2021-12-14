@@ -55,7 +55,7 @@ const ResponsiveDrawer = ({ children }) => {
         {[
           [
             `Hello ${
-              JSON.parse(localStorage.getItem('currentUser')).name || `Admin`
+              JSON.parse(localStorage.getItem('currentUsers')).name || `Admin`
             }`
           ]
         ].map((text, index) => (
@@ -148,9 +148,9 @@ const ResponsiveDrawer = ({ children }) => {
             button
             key={text}
             onClick={() => {
+              localStorage.setItem('currentUsers', '');
+              localStorage.setItem('tokenss', false);
               configapp.auth().signOut();
-              localStorage.setItem('currentUser', '');
-              localStorage.setItem('token', false);
               his.push('/');
             }}
           >

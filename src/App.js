@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import { Route, Switch } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import Login from './Login';
 import Signup from './signup';
 import AdminDashborad from './admindashborad';
@@ -38,7 +39,7 @@ function App() {
           path="/EditProduct/:id/:keys"
           component={EditProduct}
         />
-
+        <Redirect to="/" />
         {/* <Route exact path="/" component={AllProducts} />
         <Route exact path="/Cart" component={Cart} />
         <Route exact path="/Orders" component={Orders} /> */}
