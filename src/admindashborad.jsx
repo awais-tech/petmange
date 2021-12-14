@@ -150,6 +150,7 @@ const ResponsiveDrawer = ({ children }) => {
             onClick={() => {
               configapp.auth().signOut();
               localStorage.setItem('currentUser', '');
+              localStorage.setItem('token', false);
               his.push('/');
             }}
           >

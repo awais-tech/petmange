@@ -116,6 +116,7 @@ export default function Login() {
           .once('value', (user) => {
             if (user.val()) {
               localStorage.setItem('currentUser', JSON.stringify(user.val()));
+              localStorage.setItem('token', true);
               his.push('Admin');
             } else {
               configapp.auth().signOut();

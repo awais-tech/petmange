@@ -13,6 +13,7 @@ import Orders from './Orders';
 import Home from './Home';
 import AddEditProduct from './AddProduct';
 import EditProduct from './EditProduct';
+import PrivateRoute from './Privateroute';
 
 function App() {
   return (
@@ -20,15 +21,23 @@ function App() {
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/signup" component={Signup} />
-        <Route exact path="/Admin" component={Home} />
-        <Route exact path="/User/:id?" component={User} />
-        <Route exact path="/Doctor" component={Doctor} />
-        <Route exact path="/Food" component={Food} />
-        <Route exact path="/Vaccines" component={Vaccines} />
-        <Route exact path="/Accessories" component={Accessories} />
-        <Route exact path="/Orders" component={Orders} />
-        <Route exact path="/AddEditProduct/:id" component={AddEditProduct} />
-        <Route exact path="/EditProduct/:id/:keys" component={EditProduct} />
+        <PrivateRoute exact path="/Admin" component={Home} />
+        <PrivateRoute exact path="/User/:id?" component={User} />
+        <PrivateRoute exact path="/Doctor" component={Doctor} />
+        <PrivateRoute exact path="/Food" component={Food} />
+        <PrivateRoute exact path="/Vaccines" component={Vaccines} />
+        <PrivateRoute exact path="/Accessories" component={Accessories} />
+        <PrivateRoute exact path="/Orders" component={Orders} />
+        <PrivateRoute
+          exact
+          path="/AddEditProduct/:id"
+          component={AddEditProduct}
+        />
+        <PrivateRoute
+          exact
+          path="/EditProduct/:id/:keys"
+          component={EditProduct}
+        />
 
         {/* <Route exact path="/" component={AllProducts} />
         <Route exact path="/Cart" component={Cart} />
