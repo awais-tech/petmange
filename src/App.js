@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/Accessories" component={Accessories} />
         <Route exact path="/Orders" component={Orders} />
         <Route exact path="/AddEditProduct/:id" component={AddEditProduct} />
-        <Route exact path="/AddEditProduct/:id/:key" component={EditProduct} />
+        <Route exact path="/EditProduct/:id/:keys" component={EditProduct} />
 
         {/* <Route exact path="/" component={AllProducts} />
         <Route exact path="/Cart" component={Cart} />

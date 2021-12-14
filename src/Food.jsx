@@ -46,6 +46,9 @@ const Food = (props) => {
   const FoodCall = (_id) => {
     configapp.database().ref(`Food/${_id}`).remove();
   };
+  const AccessoriesEdit = (_id) => {
+    his.push(`EditProduct/Food/${_id}`);
+  };
   return (
     <ResponsiveDrawer>
       <Button
@@ -97,13 +100,23 @@ const Food = (props) => {
               width: 200,
               renderCell: (params) => {
                 return (
-                  <Button
-                    onClick={() => FoodCall(params.row.id)}
-                    variant="contained"
-                    color="error"
-                  >
-                    Delete
-                  </Button>
+                  <>
+                    <Button
+                      style={{ marginRight: '4px' }}
+                      onClick={() => FoodCall(params.row.id)}
+                      variant="contained"
+                      color="error"
+                    >
+                      Delete
+                    </Button>
+                    <Button
+                      onClick={() => AccessoriesEdit(params.row.id)}
+                      variant="contained"
+                      color="primary"
+                    >
+                      Edit
+                    </Button>
+                  </>
                 );
               }
             }

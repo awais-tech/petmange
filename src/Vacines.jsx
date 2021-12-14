@@ -55,6 +55,9 @@ const Vaccines = (props) => {
   const VaccinesCall = (_id) => {
     configapp.database().ref(`Vaccines/${_id}`).remove();
   };
+  const AccessoriesEdit = (_id) => {
+    his.push(`EditProduct/Vaccines/${_id}`);
+  };
   return (
     <ResponsiveDrawer>
       <Button
@@ -106,13 +109,23 @@ const Vaccines = (props) => {
               width: 200,
               renderCell: (params) => {
                 return (
-                  <Button
-                    onClick={() => VaccinesCall(params.row.id)}
-                    variant="contained"
-                    color="error"
-                  >
-                    Delete
-                  </Button>
+                  <>
+                    <Button
+                      onClick={() => VaccinesCall(params.row.id)}
+                      style={{ marginRight: '4px' }}
+                      variant="contained"
+                      color="error"
+                    >
+                      Delete
+                    </Button>
+                    <Button
+                      onClick={() => AccessoriesEdit(params.row.id)}
+                      variant="contained"
+                      color="primary"
+                    >
+                      Edit
+                    </Button>
+                  </>
                 );
               }
             }

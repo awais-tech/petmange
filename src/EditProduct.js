@@ -44,8 +44,8 @@ export default function EditProduct() {
       .database()
       .ref(`${id}/${keys}`)
 
-      .on('value', (user) => {
-        SetData({
+      .once('value', (user) => {
+        setFields({
           Quantity: user.val().Quantity,
           Company: user.val().Company,
           Title: user.val().Title,
@@ -55,11 +55,7 @@ export default function EditProduct() {
           imgSrc: user.val().Image
         });
       });
-
-    return () => {
-      unsubscribe();
-    };
-  });
+  }, []);
   const [fFields, setFields] = React.useState({
     Quantity: '',
     Company: '',
@@ -69,7 +65,7 @@ export default function EditProduct() {
     images: '',
     imgSrc: ''
   });
-  const { id } = useParams();
+  const { id, keys } = useParams();
   const [error, seterror] = React.useState({
     Quantity: '',
     Company: '',
@@ -188,7 +184,7 @@ export default function EditProduct() {
         Title: fFields.Title,
         Cost: fFields.Cost,
         Expiredate: fFields.Dtime,
-        Image: imgSrc
+        Image: fFields.imgSrc
       });
       notify('Your Product is Updated');
       his.goBack();
@@ -223,7 +219,7 @@ export default function EditProduct() {
                   <ShoppingBasketIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                  Add Product
+                  Edit Product
                 </Typography>
                 <Box
                   component="form"

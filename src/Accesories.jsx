@@ -47,6 +47,9 @@ const Accessories = () => {
   const AccessoriesCall = (_id) => {
     configapp.database().ref(`Accessories/${_id}`).remove();
   };
+  const AccessoriesEdit = (_id) => {
+    his.push(`EditProduct/Accessories/${_id}`);
+  };
   return (
     <ResponsiveDrawer>
       <Button
@@ -112,7 +115,7 @@ const Accessories = () => {
                       Delete
                     </Button>
                     <Button
-                      onClick={() => AccessoriesCall(params.row.id)}
+                      onClick={() => AccessoriesEdit(params.row.id)}
                       variant="contained"
                       color="primary"
                     >
