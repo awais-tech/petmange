@@ -69,14 +69,14 @@ const Orders = (props) => {
           Back
         </Button>
         <h3 style={{ textAlign: 'center' }}>All Orders</h3>
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ width: '100%' }}>
           <DataGrid
             autoHeight
-            style={{ height: 400, width: '100%', color: 'green' }}
+            style={{ width: '100%', color: 'green' }}
             columns={[
               { field: 'Date', width: 200 },
               { field: 'Name', width: 150 },
-              { field: 'Number', width: 200 },
+              { field: 'Number', width: 170 },
               { field: 'Quantity', width: 100 },
               { field: 'TotalPrice', width: 100 },
               {

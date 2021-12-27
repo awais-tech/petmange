@@ -74,18 +74,17 @@ const Accessories = () => {
       >
         <AddIcon />
       </Fab>
-      <div style={{ height: 400, width: '100%' }}>
+      <div style={{ width: '100%' }}>
         <DataGrid
           autoHeight
           style={{
-            height: 400,
             width: '100%',
             color: 'green'
           }}
           columns={[
-            { field: 'Company', width: 120 },
-            { field: 'Cost', width: 100 },
-            { field: 'Expiredate', width: 200 },
+            { field: 'Company', width: 210 },
+            { field: 'Cost', width: 90 },
+            { field: 'Expiredate', width: 120 },
             { field: 'Quantity', width: 80 },
             { field: 'Title', width: 160 },
             {

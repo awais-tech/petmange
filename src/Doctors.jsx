@@ -67,16 +67,16 @@ const Doctor = (props) => {
           Back
         </Button>
         <h3 style={{ textAlign: 'center' }}>All Doctors</h3>
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ width: '100%' }}>
           <DataGrid
             autoHeight
-            style={{ height: 400, width: '100%', color: 'green' }}
+            style={{ width: '100%', color: 'green' }}
             columns={[
-              { field: 'ClinicAddress', width: 200 },
+              { field: 'ClinicAddress', width: 300 },
               { field: 'City', width: 100 },
               { field: 'Experience', width: 120 },
               { field: 'Email', width: 220 },
-              { field: 'Name', width: 100 },
+              { field: 'Name', width: 140 },
               {
                 field: 'profileUrl',
                 headerName: 'Image',

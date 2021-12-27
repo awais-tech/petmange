@@ -73,14 +73,14 @@ const User = (props) => {
           Back
         </Button>
         <h3 style={{ textAlign: 'center' }}>All Users</h3>
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ width: '100%' }}>
           <DataGrid
             autoHeight
-            style={{ height: 400, width: '100%', color: 'green' }}
+            style={{ width: '100%', color: 'green' }}
             columns={[
-              { field: 'Address', width: 200 },
+              { field: 'Address', width: 270 },
               { field: 'City', width: 100 },
-              { field: 'Email', width: 200 },
+              { field: 'Email', width: 250 },
               { field: 'Gender', width: 100 },
               { field: 'Name', width: 150 },
               { field: 'Number', width: 150 },
